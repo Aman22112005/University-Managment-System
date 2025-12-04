@@ -129,3 +129,5 @@ Track development milestones here. Update as you progress.
 **Current Status**: In early development. Login/register pages are prototyped. Next: DB setup and basic backend routes.
 
 For questions or updates, contact pradeepgame3@gmail.com or open an issue on GitHub.
+
+by **Aman Singh Bisht**
