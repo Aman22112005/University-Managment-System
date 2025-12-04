@@ -1,0 +1,21 @@
+name: Ideas 💡
+description: Share ideas for new features or improvements.
+body:
+  - type: textarea
+    id: idea-description
+    attributes:
+      label: Describe your idea
+      description: Provide a clear and detailed explanation of your idea.
+      placeholder: "I think we could add a feature that..."
+      value: ""
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - UI/UX
+        - Performance
+        - New Feature
+        - Enhancement
+        - Other
+    required: true
