@@ -32,13 +32,5 @@ def register():
         print(f"Error: {e}")
         return "An error occured", 500
     
-@app.route('/registersubmit')
-def register():
-    try:
-        return render_template('Register.html')
-    except Exception as e:
-        print(f"Error: {e}")
-        return "An error occured", 500
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)

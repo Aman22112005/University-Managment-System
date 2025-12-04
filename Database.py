@@ -31,4 +31,4 @@ def get_db_connection():
 		print("Error: ", err)
 		return None
 	
-	
+

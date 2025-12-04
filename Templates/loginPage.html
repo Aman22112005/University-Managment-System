@@ -1,6 +1,5 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
 </head>
 
 <body class="bg-primary-subtle text-primary-emphasis">
-
   <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">Navbar</a>
@@ -30,33 +28,35 @@
       </div>
     </div>
   </nav>
-  <div class="my-5 mx-4">
-    <div class="px-2 rounded-3 border bg-white border-dark-subtle">
-      <div class="mx-1 my-1">
-        <div>
+  <div class="container my-5">  <!-- Changed to container for max-width control and centering on desktop -->
+    <div class="px-2 px-md-4 rounded-3 border bg-white border-dark-subtle">  <!-- Added px-md-4 for more padding on desktop -->
+      <div class="mx-1 mx-md-3 my-1 my-md-3">  <!-- Increased margins on desktop for better spacing -->
+        <div>  <!-- Reverted to original plain div for "Login Portal" -->
           Login Portal
         </div>
-        <div class="border"></div>
+        <div class="border mb-4"></div>  <!-- Added mb-4 for spacing -->
 
         <!-- Wrap the form elements in a <form> tag to send data to Flask -->
         <form action="/loginsubmit" method="POST">
           <div class="my-5">
             <h3 class="col-auto">LOGIN</h3>
-            <select class="form-select col-auto" name="login_type" aria-label="Default select example">
-              <option selected>As Student</option>
-              <option value="1">As College Admin</option>
-              <option value="2">As University Admin</option>
+            <select class="form-select col-auto" name="login_type" aria-label="Select login type" required>  <!-- Added required and better aria-label -->
+              <option value="student" selected>As Student</option>
+              <option value="college_admin">As College Admin</option>
+              <option value="university_admin">As University Admin</option>
             </select>
           </div>
           <div class="px-4 py-3 rounded-3 border bg-white border-dark-subtle">
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
-                placeholder="name@example.com" required>
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" id="email"
+                placeholder="name@example.com" autocomplete="email" required>
             </div>
-            <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="inputPassword5" name="password" class="form-control"
-              aria-describedby="passwordHelpBlock" required>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" name="password" class="form-control"
+                aria-describedby="passwordHelpBlock" autocomplete="current-password" required>
+            </div>
           </div>
           <div class="d-grid m-4">
             <button class="btn btn-primary" type="submit">LOGIN</button>
@@ -72,5 +72,4 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
