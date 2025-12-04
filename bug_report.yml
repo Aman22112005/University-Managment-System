@@ -1,0 +1,54 @@
+name: Bug Report
+description: Report a bug or issue in the UMS application.
+title: "[BUG] "
+labels: ["bug", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please provide details to help us fix it.
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: A brief description of the bug.
+      placeholder: "e.g., Login page crashes on mobile devices."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this bug?
+      placeholder: |
+        1. Go to the login page.
+        2. Enter invalid credentials.
+        3. Click 'Login'.
+        4. See error.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: "User should see a friendly error message."
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happens?
+      placeholder: "Page crashes with a 500 error."
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS, Python version, etc.
+      placeholder: "e.g., Chrome 120, Windows 11, Python 3.10"
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Screenshots, logs, or anything else?
+      placeholder: "Attach screenshots or error logs here."
