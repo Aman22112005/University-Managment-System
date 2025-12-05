@@ -31,6 +31,25 @@ def register():
     except Exception as e:
         print(f"Error: {e}")
         return "An error occured", 500
+
+@app.route('/registersubmit', methods=['POST'])
+def registersubmit():
+    try:
+        Name = request.form.get('Name')
+        DOB = request.form.get('DOB')
+        email = request.form.get('email')
+        Phone = request.form.get('Phone')
+        Aadhar = request.form.get('Aadhar')
+        Street = request.form.get('Street')
+        City = request.form.get('City')
+        District = request.form.get('District')
+        State = request.form.get('State')
+        
+        return f"{Name} {DOB} {email} {Phone} {Aadhar} {Street} {City} {District} {State}"
+    except Exception as e:
+        print(f"Error: {e}")
+        return "An error occured", 500
+
     
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
