@@ -30,5 +30,3 @@ def get_db_connection():
 	except Exception as err:
 		print("Error: ", err)
 		return None
-	
-print(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT)
