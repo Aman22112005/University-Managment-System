@@ -72,42 +72,4 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-  </html>        <div class="border mb-4"></div>  <!-- Added mb-4 for spacing -->
-
-        <!-- Wrap the form elements in a <form> tag to send data to Flask -->
-        <form action="/loginsubmit" method="POST">
-          <div class="my-5">
-            <h3 class="col-auto">LOGIN</h3>
-            <select class="form-select col-auto" name="login_type" aria-label="Select login type" required>  <!-- Added required and better aria-label -->
-              <option value="student" selected>As Student</option>
-              <option value="college_admin">As College Admin</option>
-              <option value="university_admin">As University Admin</option>
-            </select>
-          </div>
-          <div class="px-4 py-3 rounded-3 border bg-white border-dark-subtle">
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" name="email" id="email"
-                placeholder="name@example.com" autocomplete="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" id="password" name="password" class="form-control"
-                aria-describedby="passwordHelpBlock" autocomplete="current-password" required>
-            </div>
-          </div>
-          <div class="d-grid m-4">
-            <button class="btn btn-primary" type="submit">LOGIN</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <h5 class="text-center m-4">OR</h5>
-    <div class="d-grid mx-4">
-      <a href="/register" class="btn btn-outline-primary">REGISTER</a>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 </html>
